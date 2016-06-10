@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>로그인 테스트</title>
+	<style>
+		.button{
+			background-color: orange;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-decoration: none;
+			text-align: center;
+			display: inline-block;
+			margin: 4px 2px;
+			font-size: 30px;
+			transition-duration: 0.4s;
+		}
+		.button:hover{
+			box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+		section {
+			float:left;
+			padding:20px;
+		}
+	</style>
+</head>
+	<body>
+		<section>
+		<form method="post" action="/test">
+     			<button type="submit" class="button">"얍"</button>
+		</form>
+		{% if name %}
+		<br>
+		<h4><span style="background-color:orange;color:white;padding:20px;">Execution time without ARCUS: {{ name[0] }}sec</span></h4>
+		<br>
+		<h4><span style="background-color:orange;color:white;padding:20px;">Execution time with ARCUS: {{ name[1] }}sec</span></h4>
+		{% endif %}
+		</section>
+	</body>
+</html>
